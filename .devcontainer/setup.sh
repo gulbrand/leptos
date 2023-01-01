@@ -18,9 +18,12 @@ rustup component add rustfmt
 rustup component add rustfmt --toolchain nightly
 rustup component add clippy 
 rustup component add clippy --toolchain nightly
+rustup toolchain install nightly
+rustup target add wasm32-unknown-unknown
 
 cargo install cargo-expand
 cargo install cargo-edit
+cargo install trunk
 
 ## setup and install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
