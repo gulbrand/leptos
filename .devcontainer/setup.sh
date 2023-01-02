@@ -13,6 +13,7 @@ apt-get install -y \
 
 ## Install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
+export PATH=/root/.cargo/bin:$PATH
 rustup install nightly
 rustup component add rustfmt
 rustup component add rustfmt --toolchain nightly
@@ -24,6 +25,7 @@ rustup target add wasm32-unknown-unknown
 cargo install cargo-expand
 cargo install cargo-edit
 cargo install trunk
+cargo install exa
 
 ## setup and install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
